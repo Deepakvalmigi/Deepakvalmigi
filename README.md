@@ -217,11 +217,14 @@ If you are a builder, startup founder, investor, or client looking to automate o
   <a href="https://github.com/Deepakvalmigi">
     <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
   </a>
-  <a href="mailto:deepakvalmigi@gmail.com">
+  <a href="mailto:versalflow.deepak@gmail.com">
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
   </a>
-  <a href="https://linkedin.com/in/deepakvalmigi">
+  <a href="https://linkedin.com/in/deepak-v0786">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
+  <a href="https://www.instagram.com/_d_e_e_p_a_k_v?igsh=bGUxaXkwOWZhMGtx">
+    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" />
   </a>
 </div>
 
