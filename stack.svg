@@ -34,12 +34,8 @@
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
 
-    <!-- Paths for AnimateMotion (Ellipses) -->
-    <!-- Orbit 1: rx=200, ry=58 -->
     <path id="stack-path-orbit1" d="M -200,0 A 200 58 0 1 0 200,0 A 200 58 0 1 0 -200,0" fill="none" />
-    <!-- Orbit 2: rx=290, ry=74 -->
     <path id="stack-path-orbit2" d="M -290,0 A 290 74 0 1 0 290,0 A 290 74 0 1 0 -290,0" fill="none" />
-    <!-- Orbit 3: rx=380, ry=90 -->
     <path id="stack-path-orbit3" d="M -380,0 A 380 90 0 1 0 380,0 A 380 90 0 1 0 -380,0" fill="none" />
   </defs>
 
@@ -65,19 +61,15 @@
     .chip-8 { animation: chipGlow 4s infinite 3.0s; }
   </style>
 
-  <!-- Frame -->
   <rect x="10" y="10" width="920" height="460" rx="20" fill="url(#stack-card-bg)" stroke="url(#stack-border-grad)" stroke-width="1.5" />
   <rect x="10" y="10" width="920" height="460" rx="20" fill="url(#stack-dot-pattern)" />
 
-  <!-- Header -->
   <g transform="translate(40, 42)">
     <text x="0" y="0" class="stack-font" font-size="11" font-weight="800" fill="url(#stack-header-grad)" letter-spacing="1.5">PLANETARY ARCHITECTURE</text>
     <text x="0" y="24" class="stack-font" font-size="22" font-weight="900" fill="#f8fafc">Tech Orbit &amp; Capability Matrix</text>
-    <text x="0" y="44" class="stack-font" font-size="12" fill="#94a3b8">Simple Icons riding three tilted elliptical orbits around the VersalFlow core engine.</text>
+    <text x="0" y="44" class="stack-font" font-size="12" fill="#94a3b8">Interactive Simple Icons riding three tilted elliptical orbits around the core engine.</text>
   </g>
 
-  <!-- ================= TECH ORBIT VISUALIZATION (CENTER: 470, 195) ================= -->
-  <!-- Ambient Core Glow -->
   <circle cx="470" cy="195" r="90" fill="#22d3ee" fill-opacity="0.08" filter="url(#stack-glow-strong)" />
   <circle cx="470" cy="195" r="140" fill="#a78bfa" fill-opacity="0.06" filter="url(#stack-glow-strong)" />
 
@@ -85,7 +77,6 @@
   <g transform="translate(470, 195) rotate(-8)">
     <ellipse cx="0" cy="0" rx="380" ry="90" fill="none" stroke="#334155" stroke-opacity="0.4" stroke-width="1.2" stroke-dasharray="4 6" />
 
-    <!-- Planet 3A: Flutter (Placed at -380,0) -->
     <g>
       <animateMotion dur="26s" repeatCount="indefinite" begin="0s">
         <mpath href="#stack-path-orbit3" />
@@ -95,7 +86,6 @@
       <text x="0" y="24" class="stack-font" font-size="9" font-weight="700" fill="#cbd5e1" text-anchor="middle">Flutter</text>
     </g>
 
-    <!-- Planet 3B: OpenAI (Placed offset along orbit) -->
     <g>
       <animateMotion dur="26s" repeatCount="indefinite" begin="-8.6s">
         <mpath href="#stack-path-orbit3" />
@@ -105,7 +95,6 @@
       <text x="0" y="24" class="stack-font" font-size="9" font-weight="700" fill="#cbd5e1" text-anchor="middle">OpenAI</text>
     </g>
 
-    <!-- Planet 3C: Linux/CI -->
     <g>
       <animateMotion dur="26s" repeatCount="indefinite" begin="-17.3s">
         <mpath href="#stack-path-orbit3" />
@@ -120,7 +109,6 @@
   <g transform="translate(470, 195) rotate(18)">
     <ellipse cx="0" cy="0" rx="290" ry="74" fill="none" stroke="#334155" stroke-opacity="0.5" stroke-width="1.2" stroke-dasharray="3 5" />
 
-    <!-- Planet 2A: Node.js -->
     <g>
       <animateMotion dur="20s" repeatCount="indefinite" begin="0s">
         <mpath href="#stack-path-orbit2" />
@@ -130,7 +118,6 @@
       <text x="0" y="24" class="stack-font" font-size="9" font-weight="700" fill="#cbd5e1" text-anchor="middle">Node.js</text>
     </g>
 
-    <!-- Planet 2B: Next.js -->
     <g>
       <animateMotion dur="20s" repeatCount="indefinite" begin="-6.6s">
         <mpath href="#stack-path-orbit2" />
@@ -140,7 +127,6 @@
       <text x="0" y="24" class="stack-font" font-size="9" font-weight="700" fill="#cbd5e1" text-anchor="middle">Next.js</text>
     </g>
 
-    <!-- Planet 2C: TypeScript -->
     <g>
       <animateMotion dur="20s" repeatCount="indefinite" begin="-13.3s">
         <mpath href="#stack-path-orbit2" />
@@ -151,29 +137,26 @@
     </g>
   </g>
 
-  <!-- ORBIT 1 (INNER, Tilted -16deg, rx=200, ry=58) -->
+  <!-- ORBIT 1 (INNER, Tilted -16deg) -->
   <g transform="translate(470, 195) rotate(-16)">
     <ellipse cx="0" cy="0" rx="200" ry="58" fill="none" stroke="#22d3ee" stroke-opacity="0.6" stroke-width="1.4" stroke-dasharray="2 4" />
 
-    <!-- Planet 1A: REACT + TWO ORBITING MOONS (Vite & Zustand) -->
+    <!-- Planet 1A: REACT + TWO MOONS -->
     <g>
       <animateMotion dur="14s" repeatCount="indefinite" begin="0s">
         <mpath href="#stack-path-orbit1" />
       </animateMotion>
 
-      <!-- React Body -->
       <circle cx="0" cy="0" r="17" fill="#0b101d" stroke="#22d3ee" stroke-width="2" />
       <path d="M12 9c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3zm0 4.5c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5zm10.5-2.5c0-1.5-2.5-3.5-6-4.5 1.5-2 2-4 1.5-5-.5-1-2.5-1-5 .5-1.5-2-3.5-3-5-3s-3.5 1-5 3c-2.5-1.5-4.5-1.5-5-.5-.5 1 0 3 1.5 5-3.5 1-6 3-6 4.5s2.5 3.5 6 4.5c-1.5 2-2 4-1.5 5 .5 1 2.5 1 5-.5 1.5 2 3.5 3 5 3s3.5-1 5-3c2.5 1.5 4.5 1.5 5 .5.5-1 0-3-1.5-5 3.5-1 6-3 6-4.5z" fill="#22d3ee" transform="translate(-8, -8) scale(0.7)" />
       <text x="0" y="26" class="stack-font" font-size="9.5" font-weight="800" fill="#22d3ee" text-anchor="middle">React</text>
 
-      <!-- Moon 1: Vite (Rotates around React at radius 24px) -->
       <g>
         <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="3s" repeatCount="indefinite" />
         <circle cx="24" cy="0" r="5.5" fill="#0d111d" stroke="#a78bfa" stroke-width="1" />
         <text x="24" y="2.5" class="stack-mono" font-size="5.5" font-weight="800" fill="#a78bfa" text-anchor="middle">V</text>
       </g>
 
-      <!-- Moon 2: Zustand (Rotates opposite side at radius 24px) -->
       <g>
         <animateTransform attributeName="transform" type="rotate" from="180" to="540" dur="3s" repeatCount="indefinite" />
         <circle cx="24" cy="0" r="5.5" fill="#0d111d" stroke="#f472b6" stroke-width="1" />
@@ -181,7 +164,6 @@
       </g>
     </g>
 
-    <!-- Planet 1B: Tailwind CSS (Halfway along orbit) -->
     <g>
       <animateMotion dur="14s" repeatCount="indefinite" begin="-7s">
         <mpath href="#stack-path-orbit1" />
@@ -192,24 +174,21 @@
     </g>
   </g>
 
-  <!-- CENTRAL GLOWING CORE (VERSALFLOW ATOM CORE) -->
+  <!-- CENTRAL GLOWING CORE (DV - DEEPAK VALMIGI) -->
   <g transform="translate(470, 195)">
-    <!-- Rotating energy rings -->
     <circle cx="0" cy="0" r="38" fill="none" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.4" stroke-dasharray="6 4">
       <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="10s" repeatCount="indefinite" />
     </circle>
     <circle cx="0" cy="0" r="46" fill="none" stroke="#a78bfa" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="3 6">
       <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="14s" repeatCount="indefinite" />
     </circle>
-    <!-- Core Sphere -->
     <circle cx="0" cy="0" r="26" fill="url(#stack-core-glow)" />
     <circle cx="0" cy="0" r="26" fill="#0c101d" stroke="#22d3ee" stroke-width="2" />
-    <text x="0" y="6" class="stack-mono" font-size="14" font-weight="900" fill="url(#stack-header-grad)" text-anchor="middle">VF</text>
+    <text x="0" y="6" class="stack-mono" font-size="14" font-weight="900" fill="url(#stack-header-grad)" text-anchor="middle">DV</text>
   </g>
 
-  <!-- ================= GROUPED CHIP GRID (4 COLUMNS) ================= -->
+  <!-- GROUPED CHIP GRID (4 COLUMNS) -->
   <g transform="translate(35, 335)">
-    <!-- Column 1: Frontend -->
     <g transform="translate(0, 0)">
       <text x="0" y="0" class="stack-mono" font-size="10" font-weight="700" fill="#22d3ee" letter-spacing="1">FRONTEND &amp; UI</text>
       <g transform="translate(0, 12)">
@@ -226,7 +205,6 @@
       </g>
     </g>
 
-    <!-- Column 2: Backend & Microservices -->
     <g transform="translate(225, 0)">
       <text x="0" y="0" class="stack-mono" font-size="10" font-weight="700" fill="#a78bfa" letter-spacing="1">BACKEND &amp; LOGIC</text>
       <g transform="translate(0, 12)">
@@ -243,7 +221,6 @@
       </g>
     </g>
 
-    <!-- Column 3: Data & Cloud -->
     <g transform="translate(450, 0)">
       <text x="0" y="0" class="stack-mono" font-size="10" font-weight="700" fill="#f472b6" letter-spacing="1">DATA &amp; CLOUD</text>
       <g transform="translate(0, 12)">
@@ -260,7 +237,6 @@
       </g>
     </g>
 
-    <!-- Column 4: AI & Mobile -->
     <g transform="translate(675, 0)">
       <text x="0" y="0" class="stack-mono" font-size="10" font-weight="700" fill="#38bdf8" letter-spacing="1">AI &amp; MOBILE</text>
       <g transform="translate(0, 12)">

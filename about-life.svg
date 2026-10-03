@@ -67,7 +67,7 @@
 
     <rect x="75" y="10" width="355" height="22" rx="11" fill="#090a12" stroke="#1e293b" stroke-width="1" />
     <path d="M88 18v-2a2 2 0 0 1 4 0v2M86 18h8v6h-8z" fill="none" stroke="#22d3ee" stroke-width="1.3" />
-    <text x="100" y="25" class="about-mono" font-size="10" fill="#94a3b8">https://versalflow.io/deepak/manifesto</text>
+    <text x="100" y="25" class="about-mono" font-size="10" fill="#94a3b8">https://github.com/Deepakvalmigi/architecture</text>
     <line x1="334" y1="15" x2="334" y2="27" stroke="#22d3ee" stroke-width="1.8" class="about-cursor" />
 
     <g transform="translate(24, 66)">
@@ -79,7 +79,7 @@
     <g transform="translate(24, 115)">
       <rect x="0" y="0" width="40" height="40" rx="10" fill="#141727" stroke="#22d3ee" stroke-opacity="0.5" stroke-width="1" />
       <path d="M8 32V12a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v20M6 32h28M22 18h10a2 2 0 0 1 2 2v12M14 16h2M14 22h2M14 28h2M26 24h2M26 28h2" stroke="#22d3ee" stroke-width="1.8" fill="none" stroke-linecap="round" transform="translate(2, -2) scale(0.9)" />
-      <text x="52" y="16" class="about-font" font-size="13" font-weight="700" fill="#f1f5f9">Enterprise &amp; Multi-Tenant ODMS</text>
+      <text x="52" y="16" class="about-font" font-size="13" font-weight="700" fill="#f1f5f9">Enterprise &amp; Multi-Tenant Systems</text>
       <text x="52" y="32" class="about-font" font-size="11" font-weight="400" fill="#94a3b8">B2B order distribution, multi-warehouse inventory &amp; CRM.</text>
     </g>
 
@@ -104,7 +104,7 @@
     <line x1="24" y1="302" x2="426" y2="302" stroke="#1e293b" stroke-width="1" />
     <g transform="translate(24, 324)">
       <circle cx="4" cy="0" r="3" fill="#10b981" />
-      <text x="14" y="3.5" class="about-mono" font-size="9.5" fill="#64748b">STATUS: DEPLOYED &amp; SCALING PRODUCTION SUITE</text>
+      <text x="14" y="3.5" class="about-mono" font-size="9.5" fill="#64748b">STATUS: DEPLOYED &amp; SCALING PRODUCTION SYSTEMS</text>
     </g>
   </g>
 
@@ -145,7 +145,6 @@
 
     <!-- Carousel Slides -->
     <g transform="translate(24, 98)">
-      <!-- Slide 1 -->
       <g opacity="1">
         <animate attributeName="opacity" dur="12s" repeatCount="indefinite"
           values="1; 1; 0; 0; 0; 0; 0; 1"
@@ -162,7 +161,6 @@
         <text x="56" y="48" class="about-font" font-size="11.5" font-weight="400" fill="#94a3b8">Dialing in 1:2 espresso extractions while mapping scalable DB schemas.</text>
       </g>
 
-      <!-- Slide 2 -->
       <g opacity="0">
         <animate attributeName="opacity" dur="12s" repeatCount="indefinite"
           values="0; 0; 1; 1; 0; 0; 0; 0"
@@ -179,7 +177,6 @@
         <text x="56" y="48" class="about-font" font-size="11.5" font-weight="400" fill="#94a3b8">Testing self-learning agents, neural synthesis &amp; smart tool integrations.</text>
       </g>
 
-      <!-- Slide 3 -->
       <g opacity="0">
         <animate attributeName="opacity" dur="12s" repeatCount="indefinite"
           values="0; 0; 0; 0; 1; 1; 0; 0"
