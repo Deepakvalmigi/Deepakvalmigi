@@ -1,0 +1,280 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="stack-card-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0b12" />
+      <stop offset="50%" stop-color="#0d0e16" />
+      <stop offset="100%" stop-color="#080910" />
+    </linearGradient>
+
+    <linearGradient id="stack-border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#a78bfa" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#f472b6" stop-opacity="0.8" />
+    </linearGradient>
+
+    <linearGradient id="stack-header-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee" />
+      <stop offset="50%" stop-color="#a78bfa" />
+      <stop offset="100%" stop-color="#f472b6" />
+    </linearGradient>
+
+    <radialGradient id="stack-core-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="35%" stop-color="#22d3ee" />
+      <stop offset="70%" stop-color="#a78bfa" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0" />
+    </radialGradient>
+
+    <pattern id="stack-dot-pattern" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#334155" fill-opacity="0.25" />
+    </pattern>
+
+    <filter id="stack-glow-strong" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Paths for AnimateMotion (Ellipses) -->
+    <!-- Orbit 1: rx=200, ry=58 -->
+    <path id="stack-path-orbit1" d="M -200,0 A 200 58 0 1 0 200,0 A 200 58 0 1 0 -200,0" fill="none" />
+    <!-- Orbit 2: rx=290, ry=74 -->
+    <path id="stack-path-orbit2" d="M -290,0 A 290 74 0 1 0 290,0 A 290 74 0 1 0 -290,0" fill="none" />
+    <!-- Orbit 3: rx=380, ry=90 -->
+    <path id="stack-path-orbit3" d="M -380,0 A 380 90 0 1 0 380,0 A 380 90 0 1 0 -380,0" fill="none" />
+  </defs>
+
+  <style>
+    .stack-font {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+    .stack-mono {
+      font-family: 'SF Mono', 'Fira Code', 'Roboto Mono', Consolas, monospace;
+    }
+
+    @keyframes chipGlow {
+      0%, 100% { border-color: #1e293b; stroke: #1e293b; }
+      50% { stroke: #22d3ee; }
+    }
+    .chip-1 { animation: chipGlow 4s infinite 0.2s; }
+    .chip-2 { animation: chipGlow 4s infinite 0.6s; }
+    .chip-3 { animation: chipGlow 4s infinite 1.0s; }
+    .chip-4 { animation: chipGlow 4s infinite 1.4s; }
+    .chip-5 { animation: chipGlow 4s infinite 1.8s; }
+    .chip-6 { animation: chipGlow 4s infinite 2.2s; }
+    .chip-7 { animation: chipGlow 4s infinite 2.6s; }
+    .chip-8 { animation: chipGlow 4s infinite 3.0s; }
+  </style>
+
+  <!-- Frame -->
+  <rect x="10" y="10" width="920" height="460" rx="20" fill="url(#stack-card-bg)" stroke="url(#stack-border-grad)" stroke-width="1.5" />
+  <rect x="10" y="10" width="920" height="460" rx="20" fill="url(#stack-dot-pattern)" />
+
+  <!-- Header -->
+  <g transform="translate(40, 42)">
+    <text x="0" y="0" class="stack-font" font-size="11" font-weight="800" fill="url(#stack-header-grad)" letter-spacing="1.5">PLANETARY ARCHITECTURE</text>
+    <text x="0" y="24" class="stack-font" font-size="22" font-weight="900" fill="#f8fafc">Tech Orbit &amp; Capability Matrix</text>
+    <text x="0" y="44" class="stack-font" font-size="12" fill="#94a3b8">Simple Icons riding three tilted elliptical orbits around the VersalFlow core engine.</text>
+  </g>
+
+  <!-- ================= TECH ORBIT VISUALIZATION (CENTER: 470, 195) ================= -->
+  <!-- Ambient Core Glow -->
+  <circle cx="470" cy="195" r="90" fill="#22d3ee" fill-opacity="0.08" filter="url(#stack-glow-strong)" />
+  <circle cx="470" cy="195" r="140" fill="#a78bfa" fill-opacity="0.06" filter="url(#stack-glow-strong)" />
+
+  <!-- ORBIT 3 (OUTER, Tilted -8deg) -->
+  <g transform="translate(470, 195) rotate(-8)">
+    <ellipse cx="0" cy="0" rx="380" ry="90" fill="none" stroke="#334155" stroke-opacity="0.4" stroke-width="1.2" stroke-dasharray="4 6" />
+
+    <!-- Planet 3A: Flutter (Placed at -380,0) -->
+    <g>
+      <animateMotion dur="26s" repeatCount="indefinite" begin="0s">
+        <mpath href="#stack-path-orbit3" />
+      </animateMotion>
+      <circle cx="0" cy="0" r="15" fill="#0d111d" stroke="#38bdf8" stroke-width="1.5" />
+      <path d="M14.314 0L2.3 12 6 15.7 21.686 0h-7.372zm.086 11.23L7.7 18 14.4 24h7.3l-6.7-6 6.7-6.77h-7.3z" fill="#38bdf8" transform="translate(-7, -7) scale(0.6)" />
+      <text x="0" y="24" class="stack-font" font-size="9" font-weight="700" fill="#cbd5e1" text-anchor="middle">Flutter</text>
+    </g>
+
+    <!-- Planet 3B: OpenAI (Placed offset along orbit) -->
+    <g>
+      <animateMotion dur="26s" repeatCount="indefinite" begin="-8.6s">
+        <mpath href="#stack-path-orbit3" />
+      </animateMotion>
+      <circle cx="0" cy="0" r="15" fill="#0d111d" stroke="#10b981" stroke-width="1.5" />
+      <path d="M22.282 9.821a5.985 5.985 0 0 0-.516-4.91 6.046 6.046 0 0 0-6.509-2.9A6.065 6.065 0 0 0 4.981 4.18a5.984 5.984 0 0 0-3.998 2.9 6.046 6.046 0 0 0 .743 7.097 5.98 5.98 0 0 0 .51 4.911 6.051 6.051 0 0 0 6.515 2.9A5.985 5.985 0 0 0 13.26 24a6.056 6.056 0 0 0 5.772-4.206 5.99 5.99 0 0 0 3.997-2.9 6.056 6.056 0 0 0-.747-7.073zM13.26 22.43a4.476 4.476 0 0 1-2.876-1.04l.141-.081 4.779-2.758a.795.795 0 0 0 .392-.681v-6.737l2.02 1.168a.071.071 0 0 1 .038.052v5.583a4.504 4.504 0 0 1-4.494 4.494z" fill="#10b981" transform="translate(-7, -7) scale(0.6)" />
+      <text x="0" y="24" class="stack-font" font-size="9" font-weight="700" fill="#cbd5e1" text-anchor="middle">OpenAI</text>
+    </g>
+
+    <!-- Planet 3C: Linux/CI -->
+    <g>
+      <animateMotion dur="26s" repeatCount="indefinite" begin="-17.3s">
+        <mpath href="#stack-path-orbit3" />
+      </animateMotion>
+      <circle cx="0" cy="0" r="15" fill="#0d111d" stroke="#f59e0b" stroke-width="1.5" />
+      <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" fill="#f59e0b" transform="translate(-7, -7) scale(0.6)" />
+      <text x="0" y="24" class="stack-font" font-size="9" font-weight="700" fill="#cbd5e1" text-anchor="middle">Linux/CI</text>
+    </g>
+  </g>
+
+  <!-- ORBIT 2 (MIDDLE, Tilted +18deg) -->
+  <g transform="translate(470, 195) rotate(18)">
+    <ellipse cx="0" cy="0" rx="290" ry="74" fill="none" stroke="#334155" stroke-opacity="0.5" stroke-width="1.2" stroke-dasharray="3 5" />
+
+    <!-- Planet 2A: Node.js -->
+    <g>
+      <animateMotion dur="20s" repeatCount="indefinite" begin="0s">
+        <mpath href="#stack-path-orbit2" />
+      </animateMotion>
+      <circle cx="0" cy="0" r="15" fill="#0d111d" stroke="#22c55e" stroke-width="1.5" />
+      <path d="M12 0L1.6 6v12L12 24l10.4-6V6L12 0zm8.3 16.8L12 21.6 3.7 16.8V7.2L12 2.4l8.3 4.8v9.6z" fill="#22c55e" transform="translate(-7, -7) scale(0.6)" />
+      <text x="0" y="24" class="stack-font" font-size="9" font-weight="700" fill="#cbd5e1" text-anchor="middle">Node.js</text>
+    </g>
+
+    <!-- Planet 2B: Next.js -->
+    <g>
+      <animateMotion dur="20s" repeatCount="indefinite" begin="-6.6s">
+        <mpath href="#stack-path-orbit2" />
+      </animateMotion>
+      <circle cx="0" cy="0" r="15" fill="#0d111d" stroke="#ffffff" stroke-width="1.5" />
+      <path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.83 17.5l-6.5-8.4v8.4H9.5V6.5h1.83l6.5 8.4V6.5h1.83v11h-1.83z" fill="#ffffff" transform="translate(-7, -7) scale(0.6)" />
+      <text x="0" y="24" class="stack-font" font-size="9" font-weight="700" fill="#cbd5e1" text-anchor="middle">Next.js</text>
+    </g>
+
+    <!-- Planet 2C: TypeScript -->
+    <g>
+      <animateMotion dur="20s" repeatCount="indefinite" begin="-13.3s">
+        <mpath href="#stack-path-orbit2" />
+      </animateMotion>
+      <circle cx="0" cy="0" r="15" fill="#0d111d" stroke="#3178c6" stroke-width="1.5" />
+      <path d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.53 0-.96.083-1.289.248-.33.166-.495.427-.495.784 0 .232.06.43.18.595.12.165.3.3.541.407.24.107.545.207.915.3l.79.204c.82.204 1.488.487 2.003.848.514.362.772.909.772 1.642 0 .553-.14 1.033-.42 1.442a3.7 3.7 0 0 1-1.168 1.05c-.499.277-1.11.416-1.834.416-.763 0-1.492-.083-2.187-.25a9.387 9.387 0 0 1-1.653-.612v-2.616c.642.39 1.25.68 1.824.87.574.19 1.12.285 1.64.285.508 0 .918-.088 1.23-.264.312-.176.468-.45.468-.823 0-.312-.108-.567-.323-.765a3.86 3.86 0 0 0-1.047-.565l-.89-.253c-.76-.214-1.378-.507-1.853-.88-.475-.372-.713-.912-.713-1.62 0-.58.146-1.08.438-1.5.292-.42.715-.745 1.27-.975.556-.23 1.228-.345 2.016-.345zM3.445 9.945h8.84v2.336H9.72v8.528H6.965v-8.528H3.445z" fill="#3178c6" transform="translate(-7, -7) scale(0.6)" />
+      <text x="0" y="24" class="stack-font" font-size="9" font-weight="700" fill="#cbd5e1" text-anchor="middle">TypeScript</text>
+    </g>
+  </g>
+
+  <!-- ORBIT 1 (INNER, Tilted -16deg, rx=200, ry=58) -->
+  <g transform="translate(470, 195) rotate(-16)">
+    <ellipse cx="0" cy="0" rx="200" ry="58" fill="none" stroke="#22d3ee" stroke-opacity="0.6" stroke-width="1.4" stroke-dasharray="2 4" />
+
+    <!-- Planet 1A: REACT + TWO ORBITING MOONS (Vite & Zustand) -->
+    <g>
+      <animateMotion dur="14s" repeatCount="indefinite" begin="0s">
+        <mpath href="#stack-path-orbit1" />
+      </animateMotion>
+
+      <!-- React Body -->
+      <circle cx="0" cy="0" r="17" fill="#0b101d" stroke="#22d3ee" stroke-width="2" />
+      <path d="M12 9c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3zm0 4.5c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5zm10.5-2.5c0-1.5-2.5-3.5-6-4.5 1.5-2 2-4 1.5-5-.5-1-2.5-1-5 .5-1.5-2-3.5-3-5-3s-3.5 1-5 3c-2.5-1.5-4.5-1.5-5-.5-.5 1 0 3 1.5 5-3.5 1-6 3-6 4.5s2.5 3.5 6 4.5c-1.5 2-2 4-1.5 5 .5 1 2.5 1 5-.5 1.5 2 3.5 3 5 3s3.5-1 5-3c2.5 1.5 4.5 1.5 5 .5.5-1 0-3-1.5-5 3.5-1 6-3 6-4.5z" fill="#22d3ee" transform="translate(-8, -8) scale(0.7)" />
+      <text x="0" y="26" class="stack-font" font-size="9.5" font-weight="800" fill="#22d3ee" text-anchor="middle">React</text>
+
+      <!-- Moon 1: Vite (Rotates around React at radius 24px) -->
+      <g>
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="3s" repeatCount="indefinite" />
+        <circle cx="24" cy="0" r="5.5" fill="#0d111d" stroke="#a78bfa" stroke-width="1" />
+        <text x="24" y="2.5" class="stack-mono" font-size="5.5" font-weight="800" fill="#a78bfa" text-anchor="middle">V</text>
+      </g>
+
+      <!-- Moon 2: Zustand (Rotates opposite side at radius 24px) -->
+      <g>
+        <animateTransform attributeName="transform" type="rotate" from="180" to="540" dur="3s" repeatCount="indefinite" />
+        <circle cx="24" cy="0" r="5.5" fill="#0d111d" stroke="#f472b6" stroke-width="1" />
+        <text x="24" y="2.5" class="stack-mono" font-size="5.5" font-weight="800" fill="#f472b6" text-anchor="middle">Z</text>
+      </g>
+    </g>
+
+    <!-- Planet 1B: Tailwind CSS (Halfway along orbit) -->
+    <g>
+      <animateMotion dur="14s" repeatCount="indefinite" begin="-7s">
+        <mpath href="#stack-path-orbit1" />
+      </animateMotion>
+      <circle cx="0" cy="0" r="15" fill="#0b101d" stroke="#38bdf8" stroke-width="1.5" />
+      <path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z" fill="#38bdf8" transform="translate(-7, -7) scale(0.6)" />
+      <text x="0" y="24" class="stack-font" font-size="9" font-weight="700" fill="#cbd5e1" text-anchor="middle">Tailwind</text>
+    </g>
+  </g>
+
+  <!-- CENTRAL GLOWING CORE (VERSALFLOW ATOM CORE) -->
+  <g transform="translate(470, 195)">
+    <!-- Rotating energy rings -->
+    <circle cx="0" cy="0" r="38" fill="none" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.4" stroke-dasharray="6 4">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="10s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="0" cy="0" r="46" fill="none" stroke="#a78bfa" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="3 6">
+      <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="14s" repeatCount="indefinite" />
+    </circle>
+    <!-- Core Sphere -->
+    <circle cx="0" cy="0" r="26" fill="url(#stack-core-glow)" />
+    <circle cx="0" cy="0" r="26" fill="#0c101d" stroke="#22d3ee" stroke-width="2" />
+    <text x="0" y="6" class="stack-mono" font-size="14" font-weight="900" fill="url(#stack-header-grad)" text-anchor="middle">VF</text>
+  </g>
+
+  <!-- ================= GROUPED CHIP GRID (4 COLUMNS) ================= -->
+  <g transform="translate(35, 335)">
+    <!-- Column 1: Frontend -->
+    <g transform="translate(0, 0)">
+      <text x="0" y="0" class="stack-mono" font-size="10" font-weight="700" fill="#22d3ee" letter-spacing="1">FRONTEND &amp; UI</text>
+      <g transform="translate(0, 12)">
+        <rect x="0" y="0" width="98" height="26" rx="6" fill="#131627" stroke="#1e293b" stroke-width="1" class="chip-1" />
+        <text x="49" y="17" class="stack-font" font-size="11" font-weight="600" fill="#cbd5e1" text-anchor="middle">Next.js 14</text>
+        <rect x="106" y="0" width="98" height="26" rx="6" fill="#131627" stroke="#1e293b" stroke-width="1" class="chip-2" />
+        <text x="155" y="17" class="stack-font" font-size="11" font-weight="600" fill="#cbd5e1" text-anchor="middle">React 19</text>
+      </g>
+      <g transform="translate(0, 46)">
+        <rect x="0" y="0" width="98" height="26" rx="6" fill="#131627" stroke="#1e293b" stroke-width="1" class="chip-3" />
+        <text x="49" y="17" class="stack-font" font-size="11" font-weight="600" fill="#cbd5e1" text-anchor="middle">TypeScript</text>
+        <rect x="106" y="0" width="98" height="26" rx="6" fill="#131627" stroke="#1e293b" stroke-width="1" class="chip-4" />
+        <text x="155" y="17" class="stack-font" font-size="11" font-weight="600" fill="#cbd5e1" text-anchor="middle">Tailwind CSS</text>
+      </g>
+    </g>
+
+    <!-- Column 2: Backend & Microservices -->
+    <g transform="translate(225, 0)">
+      <text x="0" y="0" class="stack-mono" font-size="10" font-weight="700" fill="#a78bfa" letter-spacing="1">BACKEND &amp; LOGIC</text>
+      <g transform="translate(0, 12)">
+        <rect x="0" y="0" width="98" height="26" rx="6" fill="#131627" stroke="#1e293b" stroke-width="1" class="chip-5" />
+        <text x="49" y="17" class="stack-font" font-size="11" font-weight="600" fill="#cbd5e1" text-anchor="middle">Node.js</text>
+        <rect x="106" y="0" width="98" height="26" rx="6" fill="#131627" stroke="#1e293b" stroke-width="1" class="chip-6" />
+        <text x="155" y="17" class="stack-font" font-size="11" font-weight="600" fill="#cbd5e1" text-anchor="middle">Express.js</text>
+      </g>
+      <g transform="translate(0, 46)">
+        <rect x="0" y="0" width="98" height="26" rx="6" fill="#131627" stroke="#1e293b" stroke-width="1" class="chip-7" />
+        <text x="49" y="17" class="stack-font" font-size="11" font-weight="600" fill="#cbd5e1" text-anchor="middle">PHP 8.x</text>
+        <rect x="106" y="0" width="98" height="26" rx="6" fill="#131627" stroke="#1e293b" stroke-width="1" class="chip-8" />
+        <text x="155" y="17" class="stack-font" font-size="11" font-weight="600" fill="#cbd5e1" text-anchor="middle">PM2 Cluster</text>
+      </g>
+    </g>
+
+    <!-- Column 3: Data & Cloud -->
+    <g transform="translate(450, 0)">
+      <text x="0" y="0" class="stack-mono" font-size="10" font-weight="700" fill="#f472b6" letter-spacing="1">DATA &amp; CLOUD</text>
+      <g transform="translate(0, 12)">
+        <rect x="0" y="0" width="98" height="26" rx="6" fill="#131627" stroke="#1e293b" stroke-width="1" class="chip-1" />
+        <text x="49" y="17" class="stack-font" font-size="11" font-weight="600" fill="#cbd5e1" text-anchor="middle">MySQL</text>
+        <rect x="106" y="0" width="98" height="26" rx="6" fill="#131627" stroke="#1e293b" stroke-width="1" class="chip-2" />
+        <text x="155" y="17" class="stack-font" font-size="11" font-weight="600" fill="#cbd5e1" text-anchor="middle">Firebase RTDB</text>
+      </g>
+      <g transform="translate(0, 46)">
+        <rect x="0" y="0" width="98" height="26" rx="6" fill="#131627" stroke="#1e293b" stroke-width="1" class="chip-3" />
+        <text x="49" y="17" class="stack-font" font-size="11" font-weight="600" fill="#cbd5e1" text-anchor="middle">Linux Server</text>
+        <rect x="106" y="0" width="98" height="26" rx="6" fill="#131627" stroke="#1e293b" stroke-width="1" class="chip-4" />
+        <text x="155" y="17" class="stack-font" font-size="11" font-weight="600" fill="#cbd5e1" text-anchor="middle">Nginx Proxy</text>
+      </g>
+    </g>
+
+    <!-- Column 4: AI & Mobile -->
+    <g transform="translate(675, 0)">
+      <text x="0" y="0" class="stack-mono" font-size="10" font-weight="700" fill="#38bdf8" letter-spacing="1">AI &amp; MOBILE</text>
+      <g transform="translate(0, 12)">
+        <rect x="0" y="0" width="98" height="26" rx="6" fill="#131627" stroke="#1e293b" stroke-width="1" class="chip-5" />
+        <text x="49" y="17" class="stack-font" font-size="11" font-weight="600" fill="#cbd5e1" text-anchor="middle">OpenAI API</text>
+        <rect x="106" y="0" width="98" height="26" rx="6" fill="#131627" stroke="#1e293b" stroke-width="1" class="chip-6" />
+        <text x="155" y="17" class="stack-font" font-size="11" font-weight="600" fill="#cbd5e1" text-anchor="middle">Flutter App</text>
+      </g>
+      <g transform="translate(0, 46)">
+        <rect x="0" y="0" width="98" height="26" rx="6" fill="#131627" stroke="#1e293b" stroke-width="1" class="chip-7" />
+        <text x="49" y="17" class="stack-font" font-size="11" font-weight="600" fill="#cbd5e1" text-anchor="middle">WhatsApp API</text>
+        <rect x="106" y="0" width="98" height="26" rx="6" fill="#131627" stroke="#1e293b" stroke-width="1" class="chip-8" />
+        <text x="155" y="17" class="stack-font" font-size="11" font-weight="600" fill="#cbd5e1" text-anchor="middle">Agent Workflows</text>
+      </g>
+    </g>
+  </g>
+</svg>
